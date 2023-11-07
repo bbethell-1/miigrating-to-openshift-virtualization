@@ -1,42 +1,20 @@
-= Welcome to the Red Hat Lab - Hosted Control Planes on Baremetal
+= Welcome to the Red Hat Lab - Migrating to OpenShift Virtualization
 :page-layout: home
 :!sectids:
 
 [.text-center.strong]
-== Red Hat Lab - Hosted Control Planes on Baremetal
+== This Migration to OpenShift Virtualization lab is organized in the following sections:
 
-This hands-on lab will provide you with instructions so you can deploy a Hosted cluster. The goal is to help you understand Hosted Control Planes internals, its value proposition, and make sure you can easily replicate the workflow.
+Review environment and Operator installation: This section reviews the OpenShift installation to be used for the following labs. In this section you will perform the installation of the OpenShift Virtualization operator.
 
-Although other platform types can be used to deploy a Hosted Cluster (AWS or Kubevirt in particular), we will focus on the agent provider, as it's the recommended way to deploy a cluster with bare metal workers.
+OpenShift Virtualization basics: Even this lab is related to the migration from other platforms, this lab covers the basics and the required concepts needed to run simple Virtual Machines and administrate them.
 
-IMPORTANT: This is not an official Red Hat Training. Please contact with your Red Hat representative if you want more information about Training or Guidelines about this topic / product.
+Virtual Machine Customization: One of the most important concepts running Virtual Machines is to run VMs from an existing disk and the possibility to customize them.
 
-[#contributors]
-== Contributors
+Pod Review and Virtual Machine Migration: A Virtual Machine is associated to a Pod, this section reviews how internally the VMs are running and how to migrate VMs between nodes.
 
-[cols="1,1"]
-|===
-|Name |Role
+Network Attachment: Virtual Machines by default are running in the Pod networking. For several use cases is required to run the VMs attached to a physical network, this section will demonstrate how to configure OpenShift for that purpose.
 
-|Karim Boumedhel
-|Lab Developer / Maintainer
+Migrating Virtual Machines: In this section several migration from different providers will be performed. Using the operator Migration Toolkit Virtualization (MTV) migration from Red Hat Virtualization and VMWare vCenter will be performed. Manual migration from a Libvirt/KVM node will be performed as well.
 
-|Mario Vázquez
-|Lab Developer / Maintainer
-
-|Avishay Traeger
-|Lab Reviewer
-
-|David Critch
-|Lab Reviewer
-
-|Federico Ferrando
-|Lab Reviewer
-
-|Konstantinos Karampogias
-|Lab Reviewer
-
-|Logan McNaughton
-|Lab Reviewer
-
-|===
+Architecture: An explanation behind the MTV operator and the Custom Resources used.
